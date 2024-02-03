@@ -1,24 +1,11 @@
 import { ResponsiveLine } from '@nivo/line';
 
-export default function Graph() {
-    const data = [{
-            id: 'Dataset',
-            data: [
-                { x: 'January', y: 30 },
-                { x: 'February', y: 30 },
-                { x: 'March', y: 10 },
-                { x: 'April', y: 25 },
-                { x: 'May', y: 35 },
-                { x: 'June', y: -20 },
-                { x: 'July', y: -35 }
-            ],
-        },
-    ]
+export default function Graph({monthData}) {
 
     return (
         <div style={{ height: '300px', marginTop: "50px"}}>
             <ResponsiveLine
-                data={data}
+                data={monthData}
                 margin={{ top: 20, right: 0, bottom: 20, left: 0 }}
                 xScale={{ type: 'point' }}
                 yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
