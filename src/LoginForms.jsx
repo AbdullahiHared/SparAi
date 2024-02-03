@@ -22,7 +22,7 @@ export default function LoginForms() {
                     <img src={"src/assets/facebook_logo.png"} alt={"facebook logo"}/>
                     <p>Login with Facebook</p>
                 </div>
-                <a href={"https://github.com/Miishri"} target="_blank">
+                <a href={"https://github.com/Miishri"} target="_blank" rel="noreferrer">
                     <div className={"github"}>
                         <img src={"src/assets/github_logo.png"} alt={"github logo"}/>
                         <p>Login with Github</p>
