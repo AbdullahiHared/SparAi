@@ -1,12 +1,12 @@
 import { ResponsiveLine } from '@nivo/line';
 
-export default function Graph({monthData}) {
+export default function Graph({monthData, marginBottom = 20, marginTop = 20}) {
 
     return (
-        <div style={{ height: '300px', marginTop: "50px"}}>
+        <div style={{ height: '300px', marginTop: "50px", zIndex: -1, position: "relative"}}>
             <ResponsiveLine
                 data={monthData}
-                margin={{ top: 20, right: 0, bottom: 20, left: 0 }}
+                margin={{ top: marginTop, right: 0, bottom: marginBottom, left: 0 }}
                 xScale={{ type: 'point' }}
                 yScale={{ type: 'linear', min: 'auto', max: 'auto', stacked: true, reverse: false }}
                 curve="natural"
