@@ -14,16 +14,16 @@ export default function LoginForms() {
             <GetStarted />
             <div className={"login"}>
                 <div className={"google"}>
-                <img src={"src/assets/google_logo.png"} alt={"google logo"}/>
+                <img src={"public/Images/google_logo.png"} alt={"google logo"}/>
                     <p>Login with Google</p>
                 </div>
                 <div className={"facebook"}>
-                    <img src={"src/assets/facebook_logo.png"} alt={"facebook logo"}/>
+                    <img src={"public/Images/facebook_logo.png"} alt={"facebook logo"}/>
                     <p>Login with Facebook</p>
                 </div>
                 <a href={"https://github.com/Miishri"} target="_blank" rel="noreferrer">
                     <div className={"github"}>
-                        <img src={"src/assets/github_logo.png"} alt={"github logo"}/>
+                        <img src={"public/Images/github_logo.png"} alt={"github logo"}/>
                         <p>Login with Github</p>
                     </div>
                 </a>
