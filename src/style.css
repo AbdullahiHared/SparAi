@@ -9,6 +9,21 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: white;
-  background: black;
-  height: 100vh;
+  background: #13414d;
 }
+
+/* LoginForms */
+
+.loginHeading {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.loginHeading > h1 {
+
+}
+
+
+
+/* LoginForms */
