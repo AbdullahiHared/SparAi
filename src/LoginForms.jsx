@@ -1,3 +1,4 @@
+import GetStarted from "./GetStarted.jsx";
 
 export default function LoginForms() {
 
@@ -10,12 +11,10 @@ export default function LoginForms() {
                 <h1>{greetingTitle}</h1>
                 <p>{greetingTitleDescription}</p>
             </div>
-            <div className={"get-started"}>
-                Get Started
-            </div>
+            <GetStarted />
             <div className={"login"}>
                 <div className={"google"}>
-                    <img src={"src/assets/google_logo.png"} alt={"google logo"}/>
+                <img src={"src/assets/google_logo.png"} alt={"google logo"}/>
                     <p>Login with Google</p>
                 </div>
                 <div className={"facebook"}>
