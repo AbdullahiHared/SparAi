@@ -10,20 +10,84 @@ body {
   font-family: 'Roboto', sans-serif;
   color: white;
   background: #13414d;
+  height: 100vh;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 /* LoginForms */
 
-.loginHeading {
+.login-heading {
   display: flex;
   flex-direction: column;
 
+  gap: 5px;
+  padding: 10px;
 }
 
-.loginHeading > h1 {
+.login-heading > h1 {
+  font-size: 2.5rem;
+}
 
+.login-heading > p {
+  font-size: 1.1rem;
+  word-spacing: 2px;
+}
+
+.login {
+  margin-top: 8vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 10px;
+
+  text-align: center;
+}
+
+.facebook, .google, .github{
+  font-size: 1.15rem;
+
+  padding: 10px;
+  border-radius: 10px;
+
+  width: 65vw;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 
+.facebook {
+  background: #1b74f4;
+}
+
+.google {
+  background: white;
+  color: black;
+}
+
+.github {
+  background: gray;
+}
+
+.get-started {
+  margin-top: 1vh;
+  margin-left: 3vw;
+  font-size: 1.3rem;
+  padding-bottom: 5px;
+
+  width: max-content;
+  border-bottom: solid green;
+}
+
+.get-started:hover {
+  cursor: pointer;
+}
 
 /* LoginForms */
