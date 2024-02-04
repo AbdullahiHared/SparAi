@@ -1,5 +1,7 @@
 import Graph from "./Graph.jsx";
-import LoginForms from "./LoginForms.jsx";
+import Logins from "./Logins.jsx";
+
+import {motion} from "framer-motion";
 
 
 export default function Homepage() {
@@ -18,11 +20,15 @@ export default function Homepage() {
     },
     ]
 
-
     return (
-        <div className={"homepage"}>
-            <Graph monthData={data} />
-            <LoginForms />
-        </div>
+        <motion.div
+            className={"homepage"}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0, transition: {duration: 0.3}}}
+        >
+            <Graph monthData={data}/>
+            <Logins/>
+        </motion.div>
     )
 }

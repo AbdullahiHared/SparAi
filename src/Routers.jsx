@@ -1,15 +1,18 @@
-import {Route, Routes} from "react-router-dom";
+import {Route, Routes, useLocation} from "react-router-dom";
 import Homepage from "./Homepage.jsx";
 import GettingStarted from "./GettingStarted.jsx";
 
+import {AnimatePresence} from 'framer-motion';
 
-export default function Router() {
+export default function Routers() {
+    const location = useLocation()
+
     return (
-        <>
-            <Routes>
+        <AnimatePresence>
+            <Routes location={location} key={location.pathname}>
                 <Route path="/" element={<Homepage />} />
                 <Route path="/gettingstarted" element={<GettingStarted />} />
             </Routes>
-        </>
+        </AnimatePresence>
     )
 }

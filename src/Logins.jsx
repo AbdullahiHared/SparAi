@@ -1,6 +1,6 @@
 import GetStarted from "./GetStarted.jsx";
 
-export default function LoginForms() {
+export default function Logins() {
 
     const greetingTitle = "AI-Enhanced Savings Start Now!";
     const greetingTitleDescription = "Utilize our SparAi to automate a personalized schedule, discover budget-friendly food, and receive smart tips to save on energy";

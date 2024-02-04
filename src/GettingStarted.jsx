@@ -1,6 +1,8 @@
 import Back from "./Back.jsx";
 import Graph from "./Graph.jsx";
 
+import {motion} from "framer-motion";
+
 export default function GettingStarted() {
 
     const data = [{
@@ -18,9 +20,14 @@ export default function GettingStarted() {
     ]
 
     return (
-        <div className={"getting-started"}>
+        <motion.div
+            className={"getting-started"}
+            initial={{opacity: 0}}
+            animate={{opacity: 1}}
+            exit={{opacity: 0, transition: {duration: 0.3}}}
+        >
             <Graph monthData={data} marginTop={30} marginBottom={30}/>
             <Back />
-        </div>
+        </motion.div>
     )
 }
