@@ -357,17 +357,27 @@ select::-ms-expand {
   gap: 7px;
 }
 
-.bottom-bar {
-  margin-top: 40px;
-  padding-top: 30px;
+To make the bottom bar stick to the bottom like a bottom navbar, you can use the following CSS:
 
-  border-top: 2px white solid;
-  border-radius: 15px;
+css
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
+
+.bottom-bar {
+
+}
+
 
 .tips {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+
   font-size: 13px;
 }
 
@@ -375,13 +385,18 @@ select::-ms-expand {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+
+  text-align: center;
 }
 
 
 .picture {
-  height: 7vh;
+  height: 8vh;
 
   margin-bottom: 8px;
+
+  padding: 10px;
 }
 
 

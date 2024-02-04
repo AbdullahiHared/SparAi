@@ -98,9 +98,9 @@ export default function Navbar() {
                 <div className={"bottom-bar"}>
                     <div className={"tips"}>
                         <div className={"tips-container"}>
-                            <img src={imageBucket + "/walle-assistant-bot-picture-web.png"} alt={"assistant picture"}
+                            <img src={imageBucket + "/house.png"} alt={"house picture"}
                                  className={"tips picture"}/>
-                            <p className={"bot-tips"}>Try SparAi</p>
+                            <p className={"bot-tips"}>Find Apartment</p>
                         </div>
                         <div className={"tips-container"}>
                             <img src={imageBucket + "/saving.png"} alt={"saving picture"}
@@ -108,15 +108,18 @@ export default function Navbar() {
                             <p className={"saving tips"}>Save energy</p>
                         </div>
                         <div className={"tips-container"}>
-                            <img src={imageBucket + "/walle-assistant-bot-picture-web.png"} alt={"assistant picture"}
+                            <img src={imageBucket + "/cheap-image.png"} alt={"cheap food picture"}
                                  className={"tips picture"}/>
-                            <p className={"grocery tips"}>Affordable food?</p>
+                            <p className={"grocery tips"}>Affordable food</p>
                         </div>
                         <div className={"tips-container"}>
                             <img src={imageBucket + "/save.webp"} alt={"money saving picture"}
                                  className={"tips picture"}/>
                             <p className={"Money tips"}>Money saving tips</p>
                         </div>
+                    </div>
+                    <div className={"suggestion"}>
+
                     </div>
                 </div>
             </div>

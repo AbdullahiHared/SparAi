@@ -4,11 +4,12 @@ import './style.css'
 
 import {BrowserRouter} from "react-router-dom";
 import Routers from "./extras/Routers.jsx";
-import Dashboard from "./home/Dashboard.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <Dashboard />
+      <BrowserRouter>
+          <Routers />
+      </BrowserRouter>
   </React.StrictMode>,
 )
