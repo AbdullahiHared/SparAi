@@ -1,6 +1,6 @@
 import {Route, Routes, useLocation} from "react-router-dom";
 import Homepage from "./Homepage.jsx";
-import GettingStarted from "./GettingStarted.jsx";
+import GettingStarted from "./pages/GettingStarted.jsx";
 
 import {AnimatePresence} from 'framer-motion';
 
