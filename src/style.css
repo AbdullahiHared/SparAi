@@ -156,16 +156,17 @@ a {
 .login-box form a {
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   font-size: 16px;
   overflow: hidden;
   transition: .5s;
-  margin-top: 40px;
+  margin-top: 50px;
   letter-spacing: 3px
 }
 
 .getting-started-next {
   margin-left: 30vw;
+  border-bottom: 2px solid green;
 }
 /* FORM */
 

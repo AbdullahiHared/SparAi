@@ -47,7 +47,7 @@ export default function GettingStarted() {
                         <label>Email</label>
                     </div>
                     <div className="user-box">
-                        <input type="password" name="" required=""/>
+                        <input type={"number"} name="" required=""/>
                         <label>Age</label>
                     </div>
                     <div>
