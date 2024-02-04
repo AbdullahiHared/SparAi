@@ -23,7 +23,6 @@ a {
 }
 
 /* Get Started */
-
 .get-started {
   margin-top: 1vh;
   margin-left: 3vw;
@@ -37,11 +36,9 @@ a {
 .get-started:hover {
   cursor: pointer;
 }
-
 /* Get Started */
 
 /* Logins */
-
 .login-heading {
   display: flex;
   flex-direction: column;
@@ -97,11 +94,4 @@ a {
 .github {
   background: gray;
 }
-
 /* Logins */
-
-/* transition.css */
-
-
-
-/* transition.css */
