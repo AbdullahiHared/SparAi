@@ -1,14 +1,12 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './style.css'
-import {BrowserRouter} from "react-router-dom";
-import Routers from "./Routers.jsx"
+
+import InformationForms from "./pages/InformationForms.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-      <BrowserRouter>
-          <Routers />
-      </BrowserRouter>
+      <InformationForms />
   </React.StrictMode>,
 )

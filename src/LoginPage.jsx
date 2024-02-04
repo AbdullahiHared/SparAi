@@ -4,7 +4,7 @@ import Logins from "./Logins.jsx";
 import {motion} from "framer-motion";
 
 
-export default function Homepage() {
+export default function LoginPage() {
 
     const data = [{
         id: 'Dataset',
@@ -22,7 +22,7 @@ export default function Homepage() {
 
     return (
         <motion.div
-            className={"homepage"}
+            className={"login-page"}
             initial={{opacity: 0}}
             animate={{opacity: 1}}
             exit={{opacity: 0, transition: {duration: 0.4}}}

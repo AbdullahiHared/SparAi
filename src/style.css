@@ -167,6 +167,7 @@ a {
 .getting-started-next {
   margin-left: 30vw;
   border-bottom: 2px solid green;
+  cursor: pointer;
 }
 /* FORM */
 
