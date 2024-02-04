@@ -1,4 +1,4 @@
-import GetStarted from "./GetStarted.jsx";
+import {Link} from "react-router-dom";
 
 export default function Logins() {
 
@@ -11,7 +11,11 @@ export default function Logins() {
                 <h1>{greetingTitle}</h1>
                 <p>{greetingTitleDescription}</p>
             </div>
-            <GetStarted />
+            <Link to="/gettingstarted">
+                <div className={"get-started"}>
+                    Get Started
+                </div>
+            </Link>
             <div className={"login"}>
                 <div className={"google"}>
                 <img src={"/Images/google_logo.png"} alt={"google logo"}/>

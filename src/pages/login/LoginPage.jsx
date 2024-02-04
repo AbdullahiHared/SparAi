@@ -1,4 +1,4 @@
-import Graph from "./Graph.jsx";
+import Graph from "../extras/Graph.jsx";
 import Logins from "./Logins.jsx";
 
 import {motion} from "framer-motion";
