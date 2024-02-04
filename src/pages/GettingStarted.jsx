@@ -21,6 +21,8 @@ export default function GettingStarted() {
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
+    const [student, setStudent] = useState(false)
+    const [age, setAge] = useState(false)
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -38,13 +40,24 @@ export default function GettingStarted() {
                 <form>
                     <div className="user-box">
                         <input type="text" name="" required=""/>
-                        <label>Username</label>
+                        <label>Full Name</label>
                     </div>
                     <div className="user-box">
                         <input type="password" name="" required=""/>
                         <label>Email</label>
                     </div>
-                    <a href="#">Continue</a>
+                    <div className="user-box">
+                        <input type="password" name="" required=""/>
+                        <label>Age</label>
+                    </div>
+                    <div>
+                        <label className="student-label" >Are you a student?</label>
+                        <div className="checkbox-wrapper-34">
+                            <input className='tgl tgl-ios' id='toggle-34' type='checkbox'/>
+                            <label className='tgl-btn' htmlFor='toggle-34'></label>
+                        </div>
+                    </div>
+                    <a href="#" className="getting-started-next">Next</a>
                 </form>
             </div>
         </motion.div>
