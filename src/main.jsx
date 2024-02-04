@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 import {BrowserRouter} from "react-router-dom";
-import Routers from "./pages/extras/Routers.jsx";
+import Routers from "./extras/Routers.jsx";
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
