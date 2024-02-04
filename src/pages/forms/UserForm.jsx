@@ -24,7 +24,7 @@ export default function UserForm({fullName, email, age, isStudent, updateFields}
                 <label className="student-label">Are you a student?</label>
                 <div className="checkbox-wrapper-34">
                     <input className='tgl tgl-ios' id='toggle-34' type='checkbox' value={isStudent} onChange={e => {
-                        updateFields({isStudent: e.target.value})
+                        updateFields({isStudent: e.target.checked})
                     }}/>
                     <label className='tgl-btn' htmlFor='toggle-34'></label>
                 </div>

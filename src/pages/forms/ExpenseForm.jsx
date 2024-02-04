@@ -32,8 +32,8 @@ export default function ExpenseForm({salary, monthlyBudget, travelExpenses, groc
             <div>
                 <label className="student-label">Do you have a gym membership?</label>
                 <div className="checkbox-wrapper-34">
-                    <input className='tgl tgl-ios' id='toggle-34' type='checkbox' required value={hasGym} onChange={e => {
-                        updateFields({hasGym: e.target.value})}}/>
+                    <input className='tgl tgl-ios' id='toggle-34' type='checkbox' value={hasGym} onChange={e => {
+                        updateFields({hasGym: e.target.checked})}}/>
                     <label className='tgl-btn' htmlFor='toggle-34'></label>
                 </div>
             </div>

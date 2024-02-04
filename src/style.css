@@ -101,6 +101,9 @@ a {
 .back {
   padding: 5px 0 0 5px;
   height: 5vh;
+
+  position: absolute;
+  z-index: 1;
 }
 
 /* BACK */
@@ -109,7 +112,7 @@ a {
 /* FORM */
 .login-box {
   width: 400px;
-  padding: 40px;
+  padding: 0 40px 40px 40px;
 }
 
 .login-box h2 {
@@ -160,13 +163,13 @@ a {
   font-size: 16px;
   overflow: hidden;
   transition: .5s;
-  margin-top: 50px;
+  margin-top: 30px;
   letter-spacing: 3px;
   border: none;
   cursor: pointer;
   background-color: transparent;
   border-bottom: 2px solid green;
-  color: white; /* Set the color to white */
+  color: white;
 }
 
 .getting-started-next {

@@ -5,7 +5,7 @@ export default function useMultistepForm(steps) {
 
     function next() {
         setCurrentStepIndex(i => {
-            if (i > steps.length - 1) return i
+            if (i >= steps.length - 1) return i
             return i + 1;
         })
     }
@@ -13,6 +13,8 @@ export default function useMultistepForm(steps) {
     function back() {
         setCurrentStepIndex(i => {
             if (i <= 0) return i
+            if (i === 2) return i - 2
+            if (i === 3) return i - 2
             return i - 1;
         })
     }

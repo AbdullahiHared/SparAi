@@ -3,7 +3,7 @@ import useMultistepForm from "./useMultistepForm.jsx";
 import UserForm from "./UserForm.jsx";
 import HousingForm from "./HousingForm.jsx";
 import ExpenseForm from "./ExpenseForm.jsx";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import MoreInformationForm from "./MoreInformationForm.jsx";
 import Back from "../extras/Back.jsx";
 
@@ -24,20 +24,57 @@ const INITIAL_USER_DATA = {
     moreInformation: ""
 }
 
-export default function InformationForms() {
-    const data = [{
-        id: 'Dataset',
-        data: [
-            { x: 'January', y: -35 },
-            { x: 'February', y: -15 },
-            { x: 'March', y: 20 },
-            { x: 'April', y: 15 },
-            { x: 'May', y: 15},
-            { x: 'June', y: 10 },
-            { x: 'July', y: 5}
-        ],
-    },]
+const data1 = [{
+    id: 'Dataset',
+    data: [
+        { x: 'January', y: -35 },
+        { x: 'February', y: -15 },
+        { x: 'March', y: 20 },
+        { x: 'April', y: 15 },
+        { x: 'May', y: 15},
+        { x: 'June', y: 10 },
+        { x: 'July', y: 5}
+    ],
+},]
+const data2 = [{
+    id: 'Dataset',
+    data: [
+        { x: 'January', y: 5 },
+        { x: 'February', y: 5 },
+        { x: 'March', y: 5 },
+        { x: 'April', y: 9 },
+        { x: 'May', y: 20 },
+        { x: 'June', y: -1},
+        { x: 'July', y: 1}
+    ],
+},]
+const data3 = [{
+    id: 'Dataset',
+    data: [
+        { x: 'January', y: -35 },
+        { x: 'February', y: -15 },
+        { x: 'March', y: 20 },
+        { x: 'April', y: 15 },
+        { x: 'May', y: 15},
+        { x: 'June', y: 10 },
+        { x: 'July', y: 5}
+    ],
+},]
+const data4 = [{
+    id: 'Dataset',
+    data: [
+        { x: 'January', y: -35 },
+        { x: 'February', y: -15 },
+        { x: 'March', y: 20 },
+        { x: 'April', y: 15 },
+        { x: 'May', y: 15},
+        { x: 'June', y: 10 },
+        { x: 'July', y: 5}
+    ],
+},]
 
+export default function InformationForms() {
+    const [data, setData] = useState(data1)
 
     const [userData, setUserData] = useState(INITIAL_USER_DATA)
     function updateFields(fields) {
@@ -59,8 +96,6 @@ export default function InformationForms() {
         <MoreInformationForm {...userData} updateFields={updateFields}/>
     ])
 
-    console.log(currentStepIndex)
-
     function onSubmit(e) {
         e.preventDefault()
         if (isLastStep) {
@@ -69,6 +104,18 @@ export default function InformationForms() {
             next()
         }
     }
+
+
+    useEffect(() => {
+        let updatedData = data1;
+        if (currentStepIndex === 1) updatedData = data2;
+        else if (currentStepIndex === 2) updatedData = data3;
+        else if (currentStepIndex === 3) updatedData = data4;
+        else if (currentStepIndex === 0) updatedData = data1;
+
+        setData(updatedData);
+    }, [currentStepIndex, data1, data2, data3, data4]);
+
     return (
         <>
             {isFirstStep && <Back/>}
