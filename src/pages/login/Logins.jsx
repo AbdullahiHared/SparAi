@@ -1,5 +1,8 @@
 import {Link} from "react-router-dom";
 
+
+const imageBucket = "https://s3.eu-de.cloud-object-storage.appdomain.cloud/cloud-object-storage-sparai-xyz"
+
 export default function Logins() {
 
     const greetingTitle = "AI-Enhanced Savings Start Now!";
@@ -18,16 +21,16 @@ export default function Logins() {
             </Link>
             <div className={"login"}>
                 <div className={"google"}>
-                <img src={"/Images/google_logo.png"} alt={"google logo"}/>
+                <img src={imageBucket +"/google_logo.png"} alt={"google logo"}/>
                     <p>Login with Google</p>
                 </div>
                 <div className={"facebook"}>
-                    <img src={"/Images/facebook_logo.png"} alt={"facebook logo"}/>
+                    <img src={imageBucket + "/facebook_logo.png"} alt={"facebook logo"}/>
                     <p>Login with Facebook</p>
                 </div>
                 <a href={"https://github.com/Miishri"} target="_blank" rel="noreferrer">
                     <div className={"github"}>
-                        <img src={"/Images/github_logo.png"} alt={"github logo"}/>
+                        <img src={imageBucket +"/github_logo.png"} alt={"github logo"}/>
                         <p>Login with Github</p>
                     </div>
                 </a>
