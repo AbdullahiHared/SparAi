@@ -2,20 +2,28 @@ export default function HousingForm({location, apartmentProvider, electricityPro
 
     return (
         <>
-            <div className="user-box">
-                <input type={"text"} name="Location" required value={location} onChange={e => {
+            <div className="select" style={{marginBottom: "20px"}}>
+                <select name="Location" required value={location} onChange={e => {
                     updateFields({location: e.target.value})
-                }}/>
-                <label>Location</label>
+                }}>
+                    <option value="Malmö">Malmö</option>
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Göteborg">Göteborg</option>
+                </select>
             </div>
-            <div className="user-box">
-                <input type="text" name="ApartmentProvider" required value={apartmentProvider} onChange={e => {
+            <div className="select" style={{marginBottom: "20px"}}>
+                <select name="ApartmentProvider" required value={apartmentProvider} onChange={e => {
                     updateFields({apartmentProvider: e.target.value})
-                }}/>
-                <label>Apartment Provider</label>
+                }}>
+                    <option value="Malmö Stad">Malmö Stad</option>
+                    <option value="Uppsala Hem">Uppsala Hem</option>
+                    <option value="Stockholms Hem">Stockholms Hem</option>
+                </select>
             </div>
             <div className="select">
-                <select>
+                <select name="ElectricityProvider" required value={electricityProvider} onChange={e => {
+                    updateFields({electricityProvider: e.target.value})
+                }}>
                     <option value="Vattenfall">Vattenfall</option>
                     <option value="Nordic Green Energy">Nordic Green Energy</option>
                     <option value="Göteborg Energi">Göteborg Energi</option>
@@ -23,7 +31,8 @@ export default function HousingForm({location, apartmentProvider, electricityPro
             </div>
             <div className="user-box" style={{marginTop: "20px"}}>
                 <input type={"number"} name="Rent" required min={1000} value={rent} onChange={e => {
-                    updateFields({rent: e.target.value})}}/>
+                    updateFields({rent: e.target.value})
+                }}/>
                 <label>Rent</label>
             </div>
         </>
