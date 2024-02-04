@@ -5,7 +5,8 @@ export default function UserForm({fullName, email, age, isStudent, updateFields}
         <>
             <div className="user-box">
                 <input type="text" name="fullname" required minLength={1} value={fullName} onChange={e => {
-                    updateFields({fullName: e.target.value})}}/>
+                    updateFields({fullName: e.target.value})
+                }}/>
                 <label>Full Name</label>
             </div>
             <div className="user-box">
@@ -15,7 +16,7 @@ export default function UserForm({fullName, email, age, isStudent, updateFields}
                 <label>Email</label>
             </div>
             <div className="user-box">
-                <input type={"number"} name="age" required min={1} max={60} value={age} onChange={e => {
+                <input type={"number"} name="age" required min={18} max={60} value={age} onChange={e => {
                     updateFields({age: e.target.value})
                 }}/>
                 <label>Age</label>
