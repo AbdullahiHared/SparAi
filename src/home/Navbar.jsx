@@ -1,5 +1,4 @@
 import {ResponsiveLine} from "@nivo/line";
-import AssistantBot from "./AssistantBot.jsx";
 import {Link} from "react-router-dom";
 
 const data = [
@@ -36,7 +35,7 @@ const data = [
 
 
 const imageBucket = "https://s3.eu-de.cloud-object-storage.appdomain.cloud/cloud-object-storage-sparai-xyz"
-export default function Navbar() {
+export default function Navbar({userData}) {
     const currentTime = new Date().toLocaleTimeString().substring(0, 5);
 
     return (
@@ -45,11 +44,15 @@ export default function Navbar() {
                 <img className={"sparai-logo"}
                      src={ imageBucket + "/sparai_logo.png"}
                      alt={"sparai logo"}/>
-                <p className={"welcome"}>Welcome Back, Muhammad</p>
+                <p className={"welcome"}>Welcome Back, {userData && userData.fullName}</p>
             </div>
             <div className={"nav"}>
                 <div className={"notification"}>
-                    <div style={{height: '200px', width: "95vw", border: "1px white solid", borderRadius: "4px"}}>
+                    <div className={"electricity-container"}>
+                        <p className={"electricity-reminder"}>{currentTime} - {(currentTime.substring(0, 2) >= 12) ? "Reduce electricity usage to save money" : "Increasing electricity usage can help save money"}</p>
+                        <p className={"possible-saving"}>Possible savings: 5 SEK at {currentTime}</p>
+                    </div>
+                    <div style={{height: '200px', width: "95vw", borderBottom: "1px green solid"}}>
                         <ResponsiveLine
                             data={data}
                             margin={{top: 30, right: 0, bottom: 2, left: 0}}
@@ -91,10 +94,6 @@ export default function Navbar() {
                                 );
                             }}
                         />
-                    </div>
-                    <div className={"electricity-container"}>
-                        <p className={"electricity-reminder"}>{currentTime} - {(currentTime.substring(0, 2) >= 12) ? "Reduce electricity usage to save money" : "Increasing electricity usage can help save money"}</p>
-                        <p className={"possible-saving"}>Possible savings: 5 SEK at {currentTime}</p>
                     </div>
                     <div className={"energy-usage-heading"}>
                         Energy Usage

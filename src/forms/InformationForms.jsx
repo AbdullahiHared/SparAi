@@ -6,7 +6,6 @@ import ExpenseForm from "./ExpenseForm.jsx";
 import {useEffect, useState} from "react";
 import MoreInformationForm from "./MoreInformationForm.jsx";
 import Back from "../extras/Back.jsx";
-import Dashboard from "../home/Dashboard.jsx";
 import {useNavigate} from "react-router-dom";
 
 const INITIAL_USER_DATA = {
@@ -77,7 +76,6 @@ const data4 = [{
 
 export default function InformationForms() {
     const [data, setData] = useState(data1)
-    const[isDashboard, setIsDashboard] = useState(false)
 
     const [userData, setUserData] = useState(INITIAL_USER_DATA)
     
@@ -105,7 +103,8 @@ export default function InformationForms() {
     function onSubmit(e) {
         e.preventDefault()
         if (isLastStep) {
-            navigate("/dashboard")
+            setUserData(INITIAL_USER_DATA)
+            navigate("/dashboard", { state: { userData } });
         }else {
             next()
         }
@@ -118,8 +117,6 @@ export default function InformationForms() {
         else if (currentStepIndex === 2) updatedData = data3;
         else if (currentStepIndex === 3) updatedData = data4;
         else if (currentStepIndex === 0) updatedData = data1;
-
-        if (currentStepIndex === 3) setIsDashboard(true)
 
         setData(updatedData);
     }, [currentStepIndex, data1, data2, data3, data4]);

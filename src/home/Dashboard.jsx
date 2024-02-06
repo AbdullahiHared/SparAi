@@ -1,12 +1,14 @@
 import Navbar from "./Navbar.jsx";
+import {useLocation} from "react-router-dom";
 
-export default function Dashboard({userData}) {
+export default function Dashboard() {
 
-    console.log(userData)
+    const location = useLocation();
+    const userData = location.state.userData;
 
     return (
-        <>
-            <Navbar />
-        </>
+        <div>
+            <Navbar userData={userData} />
+        </div>
     )
 }
