@@ -6,6 +6,8 @@ import ExpenseForm from "./ExpenseForm.jsx";
 import {useEffect, useState} from "react";
 import MoreInformationForm from "./MoreInformationForm.jsx";
 import Back from "../extras/Back.jsx";
+import Dashboard from "../home/Dashboard.jsx";
+import {useNavigate} from "react-router-dom";
 
 const INITIAL_USER_DATA = {
     fullName: "",
@@ -75,8 +77,12 @@ const data4 = [{
 
 export default function InformationForms() {
     const [data, setData] = useState(data1)
+    const[isDashboard, setIsDashboard] = useState(false)
 
     const [userData, setUserData] = useState(INITIAL_USER_DATA)
+    
+    const navigate = useNavigate()
+    
     function updateFields(fields) {
         setUserData(prev => {
             return {...prev, ...fields}
@@ -93,13 +99,13 @@ export default function InformationForms() {
         <UserForm {...userData} updateFields={updateFields}/>,
         <HousingForm {...userData} updateFields={updateFields}/>,
         <ExpenseForm {...userData} updateFields={updateFields}/>,
-        <MoreInformationForm {...userData} updateFields={updateFields}/>
+        <MoreInformationForm {...userData} updateFields={updateFields} />,
     ])
 
     function onSubmit(e) {
         e.preventDefault()
         if (isLastStep) {
-            setUserData(INITIAL_USER_DATA)
+            navigate("/dashboard")
         }else {
             next()
         }
@@ -113,20 +119,21 @@ export default function InformationForms() {
         else if (currentStepIndex === 3) updatedData = data4;
         else if (currentStepIndex === 0) updatedData = data1;
 
+        if (currentStepIndex === 3) setIsDashboard(true)
+
         setData(updatedData);
     }, [currentStepIndex, data1, data2, data3, data4]);
 
     return (
-        <>
-            {isFirstStep && <Back/>}
+        <>{isFirstStep && <Back/>}
             <Graph monthData={data} marginTop={30} marginBottom={30} />
             <div className="login-box">
                 <form id={"getting-started-form"} onSubmit={onSubmit}>
                     {currentStep}
-                    <button className="getting-started-next" type="submit">{isLastStep ? "Submit" : "Next"}</button>
+                    <button className="getting-started-next" type="submit" >{isLastStep ? "Submit" : "Next"}</button>
                     {!isFirstStep && <button className="getting-started-next" onClick={back}>Back</button>}
                 </form>
             </div>
-        </>
+        </ >
     )
 }

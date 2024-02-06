@@ -357,28 +357,37 @@ select::-ms-expand {
   gap: 7px;
 }
 
-To make the bottom bar stick to the bottom like a bottom navbar, you can use the following CSS:
+.bottom-bar {
+  position: fixed;
+  bottom: 5px;
+  left: 0;
 
-css
+  width: 100vw;
 
-body {
-  margin: 0;
-  padding: 0;
+  border-top: 1px white solid;
+  border-radius: 5px;
+
+  padding: 6px;
+}
+
+.electricity-container {
+  padding-top: 5px;
+
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  gap: 5px;
+  color: white;
+
+  text-align: center;
 }
-
-.bottom-bar {
-
-}
-
 
 .tips {
   display: flex;
   justify-content: space-evenly;
 
-  font-size: 13px;
+  font-size: 11px;
+
+  color: white;
 }
 
 .tip-container {
@@ -390,14 +399,11 @@ body {
   text-align: center;
 }
 
-
 .picture {
-  height: 8vh;
-
-  margin-bottom: 8px;
-
-  padding: 10px;
+  height: 6vh;
 }
 
-
+.WatsonAssistantChatHost {
+  margin-bottom: 100px;
+}
 /* NAVBAR */
